@@ -9,39 +9,44 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "YOUR_NAME"   # 浏览器标签页和导航栏左上角显示的文字
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+name                     : &name "YOUR_NAME"
+description              : &description "YOUR_NAME's homepage and blog"   # 搜索引擎结果和社交分享卡片里的描述
+url                      : "https://xuyuxiu83.github.io"
+baseurl                  : "" # 仓库名为 xuyuxiu83.github.io 故留空;换成别的仓库名则要填 "/仓库名"
+repository               : "xuyuxiu83/xuyuxiu83.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
+  # 侧边栏的每个字段都有一对:不带后缀的是英文(默认),带 _zh 的是切换到中文时显示。
+  # 留空则该条目不显示。
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  name             : "YOUR_NAME"
+  name_zh          : "你的中文名"
+  pronouns         : # example: "she/her"
+  bio              : "YOUR ROLE, e.g. PhD Student in Robotics"
+  bio_zh           : "你的职位,例:机器人方向在读博士生"
+  location         : "City, Country"
+  location_zh      : "城市"
+  employer         : "YOUR AFFILIATION"
+  employer_zh      : "你的单位"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "your@email.com"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL - 例:https://scholar.google.com/citations?user=XXXX
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL - 例:https://orcid.org/0000-0000-0000-0000
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,13 +56,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "xuyuxiu83"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -82,22 +87,12 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -183,6 +178,7 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
+  - HANDOFF.md
   - LICENSE
   - local
   - log
@@ -219,23 +215,7 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# These settings control how pages and collections are included in the site
+# These settings control how pages and posts are included in the site
 defaults:
   # _posts
   - scope:
@@ -255,41 +235,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS
@@ -299,7 +244,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# 文章 URL 形如 /posts/2026/09/my-post/。分类不再参与 URL,只用于博客归档页的筛选。
+permalink: /posts/:year/:month/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

@@ -2,6 +2,11 @@
 FROM ruby:3.2
 
 # Install dependencies
+# deb.debian.org is very slow from some networks, so point apt at a mirror first.
+RUN sed -i -e 's|deb.debian.org|mirrors.tuna.tsinghua.edu.cn|g' \
+           -e 's|security.debian.org|mirrors.tuna.tsinghua.edu.cn|g' \
+           /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true
+
 RUN apt-get update && apt-get install -y \
     build-essential \
     nodejs \

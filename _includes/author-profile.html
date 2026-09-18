@@ -15,26 +15,26 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name"><span data-i18n-en="{{ author.name }}" data-i18n-zh="{{ author.name_zh | default: author.name }}">{{ author.name }}</span></h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.bio %}<p class="author__bio"><span data-i18n-en="{{ author.bio }}" data-i18n-zh="{{ author.bio_zh | default: author.bio }}">{{ author.bio }}</span></p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse"><span data-i18n-en="{{ site.data.i18n.ui.follow.en }}" data-i18n-zh="{{ site.data.i18n.ui.follow.zh }}">{{ site.data.i18n.ui.follow.en }}</span></button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i><span data-i18n-en="{{ author.location }}" data-i18n-zh="{{ author.location_zh | default: author.location }}">{{ author.location }}</span></li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i><span data-i18n-en="{{ author.employer }}" data-i18n-zh="{{ author.employer_zh | default: author.employer }}">{{ author.employer }}</span></li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
+        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i><span data-i18n-en="{{ site.data.i18n.ui.website.en }}" data-i18n-zh="{{ site.data.i18n.ui.website.zh }}">{{ site.data.i18n.ui.website.en }}</span></a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i><span data-i18n-en="{{ site.data.i18n.ui.email.en }}" data-i18n-zh="{{ site.data.i18n.ui.email.zh }}">{{ site.data.i18n.ui.email.en }}</span></a></li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
@@ -86,7 +86,7 @@
         <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
       {% endif %}      
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i><span data-i18n-en="{{ site.data.i18n.ui.github.en }}" data-i18n-zh="{{ site.data.i18n.ui.github.zh }}">{{ site.data.i18n.ui.github.en }}</span></a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>

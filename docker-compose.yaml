@@ -1,7 +1,13 @@
 services:
   jekyll-site:
     image: jekyll-site
-    build: .
+    build:
+      context: .
+      network: host
+      args:
+        HTTP_PROXY: http://127.0.0.1:7890
+        HTTPS_PROXY: http://127.0.0.1:7890
+        NO_PROXY: localhost,127.0.0.1
     volumes: [ .:/usr/src/app ]
     ports: [ 4000:4000 ]
     user: 1000:1000

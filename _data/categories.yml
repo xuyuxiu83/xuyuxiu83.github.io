@@ -1,0 +1,23 @@
+# 博客分类,用于归档页顶部的筛选按钮。
+#
+# slug  必须和文章 front matter 里的 categories 完全一致,例如
+#         categories: [paper-notes]
+#       就对应下面的 paper-notes。
+# en/zh  是筛选按钮上显示的文字。
+# 这里的顺序就是按钮从左到右的顺序。
+
+- slug: personal-thoughts
+  en: "Personal Thoughts"
+  zh: "个人思考"
+
+- slug: paper-notes
+  en: "Paper Notes"
+  zh: "论文笔记"
+
+- slug: book-notes
+  en: "Book Notes"
+  zh: "读书笔记"
+
+- slug: project-notes
+  en: "Project Notes"
+  zh: "项目笔记"

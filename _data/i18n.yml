@@ -1,0 +1,19 @@
+# 界面文案的中英对照。改这里就能改双语切换时显示的按钮/标签文字。
+# 模板里通过 site.data.i18n.ui.<键>.en / .zh 取用。
+
+ui:
+  follow:    {en: "Follow",    zh: "关注"}
+  email:     {en: "Email",     zh: "邮箱"}
+  github:    {en: "GitHub",    zh: "GitHub"}
+  website:   {en: "Website",   zh: "个人网站"}
+  posted_on: {en: "Published:", zh: "发布于:"}
+
+archive:
+  title:  {en: "Blog posts", zh: "博客"}
+  intro:
+    en: "Browse all posts, or filter by category."
+    zh: "你可以看全部文章,也可以按分类筛选。"
+  all:    {en: "All", zh: "全部"}
+  empty:
+    en: "No posts in this category yet."
+    zh: "这个分类下还没有文章。"

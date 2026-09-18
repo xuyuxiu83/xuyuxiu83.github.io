@@ -1,0 +1,57 @@
+/*
+ * 博客归档页:顶部分类筛选按钮 + 年份分组。
+ * 颜色全部取自主题变量,所以切换 site_theme 或切到暗色模式时会自动跟随。
+ */
+
+.blog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.blog-filter__btn {
+  padding: 0.3rem 0.85rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--global-text-color, #3d4144);
+  background: transparent;
+  border: 1px solid var(--global-border-color, #dcdcdc);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.blog-filter__btn:hover,
+.blog-filter__btn:focus-visible {
+  color: var(--global-link-color, #2f7d95);
+  border-color: var(--global-link-color, #2f7d95);
+}
+
+.blog-filter__btn.is-active {
+  color: #fff;
+  background-color: var(--global-link-color, #2f7d95);
+  border-color: var(--global-link-color, #2f7d95);
+}
+
+/* 单选按钮的圆角胶囊在窄屏上容易被挤成两行,收紧一点间距 */
+@media (max-width: 37.5em) {
+  .blog-filter {
+    gap: 0.3rem;
+  }
+
+  .blog-filter__btn {
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+/* 主题里 .archive__item 等选择器可能自带 display,这里统一保证 hidden 生效 */
+.blog-archive [hidden],
+.blog-filter [hidden] {
+  display: none !important;
+}
+
+.blog-archive__empty {
+  margin: 1rem 0;
+  color: var(--global-text-color-light, #8a8a8a);
+}
