@@ -26,10 +26,10 @@ author:
   # 留空则该条目不显示。
   avatar           : "profile.jpg"
   name             : "Yuxiu Xu"
-  name_zh          : "你的中文名"
+  name_zh          : "徐宇修"
   pronouns         : # example: "she/her"
-  bio              : "HUST PhD Student in Robotics"
-  bio_zh           : "华科在读博士生"
+  bio              : "HUST PhD Student"
+  bio_zh           : "华科在读博士"
   location         : "Wuhan, China"
   location_zh      : "武汉"
   employer         : "Huazhong University of Science and Technology"
