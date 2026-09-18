@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "YOUR_NAME"   # 浏览器标签页和导航栏左上角显示的文字
+title                    : "Yuxiu Xu"   # 浏览器标签页和导航栏左上角显示的文字
 title_separator          : "-"
-name                     : &name "YOUR_NAME"
-description              : &description "YOUR_NAME's homepage and blog"   # 搜索引擎结果和社交分享卡片里的描述
+name                     : &name "Yuxiu Xu"
+description              : &description "Yuxiu's homepage and blog"   # 搜索引擎结果和社交分享卡片里的描述
 url                      : "https://xuyuxiu83.github.io"
 baseurl                  : "" # 仓库名为 xuyuxiu83.github.io 故留空;换成别的仓库名则要填 "/仓库名"
 repository               : "xuyuxiu83/xuyuxiu83.github.io"
@@ -24,18 +24,18 @@ author:
   # Biographic information
   # 侧边栏的每个字段都有一对:不带后缀的是英文(默认),带 _zh 的是切换到中文时显示。
   # 留空则该条目不显示。
-  avatar           : "profile.png"
-  name             : "YOUR_NAME"
+  avatar           : "profile.jpg"
+  name             : "Yuxiu Xu"
   name_zh          : "你的中文名"
   pronouns         : # example: "she/her"
-  bio              : "YOUR ROLE, e.g. PhD Student in Robotics"
-  bio_zh           : "你的职位,例:机器人方向在读博士生"
-  location         : "City, Country"
-  location_zh      : "城市"
-  employer         : "YOUR AFFILIATION"
-  employer_zh      : "你的单位"
+  bio              : "HUST PhD Student in Robotics"
+  bio_zh           : "华科在读博士生"
+  location         : "Wuhan, China"
+  location_zh      : "武汉"
+  employer         : "Huazhong University of Science and Technology"
+  employer_zh      : "华中科技大学"
   uri              : # URL
-  email            : "your@email.com"
+  email            : "yuxiuxu@hust.edu.cn"
 
   # Academic websites
   academia         : # URL
